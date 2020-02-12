@@ -1,0 +1,174 @@
+package carwash;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+/**
+ *
+ * @author Victor Reyes
+ */
+public class CarWash {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        
+        ArrayList productos = new ArrayList();
+        ArrayList precios = new ArrayList();
+        Random factura = new Random();
+        int n = factura.nextInt(75+25-1)+25;
+        System.out.println("**********************************");
+        System.out.println("BIENVENIDO AL CARWASH LAUX");
+        System.out.println("¿Cuál de nuestros servicios desea?");
+        System.out.println("1. Lavado Sencillo");
+        System.out.println("2. Lavado y Aspirado");
+        System.out.println("3. Lavado de Motor");
+        System.out.println("**********************************");
+        int serv = teclado.nextInt();
+        
+        System.out.println("Por favor ingrese su nombre:");
+        String nombre = teclado.next();
+        System.out.println("Ingrese su RTN:");
+        String rtn = teclado.next();
+        
+        if(serv == 1){
+            int subtotal = 100;
+            System.out.println("");
+            System.out.println("---------FACTURA--------");
+            System.out.println("Número de Factura: " + n);
+            System.out.println("CarWash Laux");
+            System.out.println("Consumidor final: " + nombre);
+            System.out.println("RTN: " + rtn);
+            System.out.println("Producto                    Precio");                 
+            productos.add("Lavado Sencillo");               
+            precios.add(100);
+            System.out.print(productos);
+            System.out.print("          "+ precios +"lps");
+            System.out.println("");
+            System.out.println("Subtotal a pagar: " + subtotal);
+        } if(serv == 2){
+            double subtotal = (150*0.15)+150;
+            System.out.println("");
+            System.out.println("---------FACTURA--------");
+            System.out.println("Número de Factura: " + n);
+            System.out.println("CarWash Laux");
+            System.out.println("Consumidor final: " + nombre);
+            System.out.println("RTN: " + rtn);
+            System.out.println("Producto                    Precio");                 
+            productos.add("Lavado y Aspirado");               
+            precios.add(150);
+            System.out.print(productos);
+            System.out.print("          "+ precios +"lps");
+            System.out.println("");
+            System.out.println("Subtotal a pagar: " + subtotal);
+        } if(serv == 3){
+            System.out.println("");
+            System.out.println("**********************************");
+            System.out.println(nombre+", ¿Desea agregar un producto extra?");
+            System.out.println("1. Aromatizante");
+            System.out.println("2. Parasol");
+            System.out.println("3. Trapo de Franela");
+            System.out.println("4. Aceite");
+            System.out.println("5. Gata Hidráulica");
+            System.out.println("6. Cancelar");
+            System.out.println("**********************************");
+            productos.add("Lavado de Motor");
+            precios.add(300);
+            int extra = teclado.nextInt();
+            if(extra == 1){
+                double subtotal = (300*0.15)+300;
+                double total = subtotal + 80;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                             Precio");                 
+                productos.add("Aromatizante");               
+                precios.add(80);
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + total);
+            } if(extra == 2){
+                double subtotal = (300*0.15)+300;
+                double total = subtotal + 60;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                             Precio");                 
+                productos.add("Parasol");               
+                precios.add(60);
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + total);
+            } if(extra == 3){
+                double subtotal = (300*0.15)+300;
+                double total = subtotal + 30;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                             Precio");                 
+                productos.add("Trapo de Franela");               
+                precios.add(30);
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + total);
+            } if(extra == 4){
+                double subtotal = (300*0.15)+300;
+                double total = subtotal + 160;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                             Precio");                 
+                productos.add("Aceite");               
+                precios.add(160);
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + total);
+            } if(extra == 5){
+                double subtotal = (300*0.15)+300;
+                double total = subtotal + 220;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                             Precio");                 
+                productos.add("Gata Hidráulica");               
+                precios.add(220);
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + total);
+            } if(extra == 6){
+                double subtotal = (300*0.15)+300;
+                System.out.println("");
+                System.out.println("---------FACTURA--------");
+                System.out.println("Número de Factura: " + n);
+                System.out.println("CarWash Laux");
+                System.out.println("Consumidor final: " + nombre);
+                System.out.println("RTN: " + rtn);
+                System.out.println("Producto                    Precio");                 
+                System.out.print(productos);
+                System.out.print("          "+ precios +"lps");
+                System.out.println("");
+                System.out.println("Subtotal a pagar: " + subtotal);
+            }
+        }
+        System.out.println("CarWash Laux le desea un feliz dia");
+    }  
+}
